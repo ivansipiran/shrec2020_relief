@@ -1,1 +1,1 @@
-# shrec2020_relief
+# SHREC 2020 - Relief
