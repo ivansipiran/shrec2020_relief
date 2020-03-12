@@ -1,0 +1,57 @@
+﻿Compilación iniciada a las 21-06-2016 17:46:34.
+     1>Proyecto "C:\Users\Admin\Documents\Sipiran\Implementations\lib\AdaptiveClustering\build\AdaptiveClustering.vcxproj" en el nodo 2 (Build destinos).
+     1>CustomBuild:
+         Building Custom Rule C:/Users/Admin/Documents/Sipiran/Implementations/lib/AdaptiveClustering/CMakeLists.txt
+         CMake does not need to re-run because C:\Users\Admin\Documents\Sipiran\Implementations\lib\AdaptiveClustering\build\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\Admin\Documents\Sipiran\Implementations\lib\AdaptiveClustering\include /nologo /W3 /WX- /O2 /Ob2 /D WIN32 /D _WINDOWS /D NDEBUG /D ADAPTIVE_LIBRARY /D _SECURE_SCL=0 /D "CMAKE_INTDIR=\"Release\"" /D AdaptiveClustering_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"AdaptiveClustering.dir\Release\\" /Fd"AdaptiveClustering.dir\Release\vc120.pdb" /Gd /TP /errorReport:prompt C:\Users\Admin\Documents\Sipiran\Implementations\lib\AdaptiveClustering\src\adaptiveClustering.cpp C:\Users\Admin\Documents\Sipiran\Implementations\lib\AdaptiveClustering\src\cluster.cpp
+         adaptiveClustering.cpp
+     1>c:\users\admin\documents\sipiran\implementations\lib\adaptiveclustering\include\PointND.h(13): warning C4251: 'AdaptiveClustering::PointND::descriptor' : class 'std::vector<double,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AdaptiveClustering::PointND'
+                 with
+                 [
+                     _Ty=double
+                 ]
+     1>c:\users\admin\documents\sipiran\implementations\lib\adaptiveclustering\include\cluster.h(16): warning C4251: 'AdaptiveClustering::Cluster::points' : class 'std::vector<AdaptiveClustering::PointND,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AdaptiveClustering::Cluster'
+                 with
+                 [
+                     _Ty=AdaptiveClustering::PointND
+                 ]
+     1>c:\users\admin\documents\sipiran\implementations\lib\adaptiveclustering\include\cluster.h(19): warning C4251: 'AdaptiveClustering::Cluster::members' : class 'std::vector<int,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AdaptiveClustering::Cluster'
+                 with
+                 [
+                     _Ty=int
+                 ]
+     1>c:\users\admin\documents\sipiran\implementations\lib\adaptiveclustering\include\cluster.h(40): warning C4267: 'return' : conversión de 'size_t' a 'int'; posible pérdida de datos
+     1>c:\users\admin\documents\sipiran\implementations\lib\adaptiveclustering\include\cluster.h(41): warning C4267: 'return' : conversión de 'size_t' a 'int'; posible pérdida de datos
+     1>C:\Users\Admin\Documents\Sipiran\Implementations\lib\AdaptiveClustering\src\adaptiveClustering.cpp(103): warning C4267: 'inicializando' : conversión de 'size_t' a 'int'; posible pérdida de datos
+         cluster.cpp
+     1>c:\users\admin\documents\sipiran\implementations\lib\adaptiveclustering\include\PointND.h(13): warning C4251: 'AdaptiveClustering::PointND::descriptor' : class 'std::vector<double,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AdaptiveClustering::PointND'
+                 with
+                 [
+                     _Ty=double
+                 ]
+     1>C:\Users\Admin\Documents\Sipiran\Implementations\lib\AdaptiveClustering\include\cluster.h(16): warning C4251: 'AdaptiveClustering::Cluster::points' : class 'std::vector<AdaptiveClustering::PointND,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AdaptiveClustering::Cluster'
+                 with
+                 [
+                     _Ty=AdaptiveClustering::PointND
+                 ]
+     1>C:\Users\Admin\Documents\Sipiran\Implementations\lib\AdaptiveClustering\include\cluster.h(19): warning C4251: 'AdaptiveClustering::Cluster::members' : class 'std::vector<int,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AdaptiveClustering::Cluster'
+                 with
+                 [
+                     _Ty=int
+                 ]
+     1>C:\Users\Admin\Documents\Sipiran\Implementations\lib\AdaptiveClustering\include\cluster.h(40): warning C4267: 'return' : conversión de 'size_t' a 'int'; posible pérdida de datos
+     1>C:\Users\Admin\Documents\Sipiran\Implementations\lib\AdaptiveClustering\include\cluster.h(41): warning C4267: 'return' : conversión de 'size_t' a 'int'; posible pérdida de datos
+     1>C:\Users\Admin\Documents\Sipiran\Implementations\lib\AdaptiveClustering\src\cluster.cpp(8): warning C4267: 'inicializando' : conversión de 'size_t' a 'int'; posible pérdida de datos
+     1>C:\Users\Admin\Documents\Sipiran\Implementations\lib\AdaptiveClustering\src\cluster.cpp(26): warning C4267: 'inicializando' : conversión de 'size_t' a 'int'; posible pérdida de datos
+         Generando código...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Admin\Documents\Sipiran\Implementations\lib\bin\AdaptiveClustering.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:/Users/Admin/Documents/Sipiran/Implementations/lib/bin/AdaptiveClustering.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Admin/Documents/Sipiran/Implementations/lib/AdaptiveClustering/build/Release/AdaptiveClustering.lib" /MACHINE:X64  /machine:x64 /DLL AdaptiveClustering.dir\Release\adaptiveClustering.obj
+         AdaptiveClustering.dir\Release\cluster.obj
+            Creando biblioteca C:/Users/Admin/Documents/Sipiran/Implementations/lib/AdaptiveClustering/build/Release/AdaptiveClustering.lib y objeto C:/Users/Admin/Documents/Sipiran/Implementations/lib/AdaptiveClustering/build/Release/AdaptiveClustering.exp
+         AdaptiveClustering.vcxproj -> C:\Users\Admin\Documents\Sipiran\Implementations\lib\bin\AdaptiveClustering.dll
+     1>Compilación del proyecto terminada "C:\Users\Admin\Documents\Sipiran\Implementations\lib\AdaptiveClustering\build\AdaptiveClustering.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:01.01

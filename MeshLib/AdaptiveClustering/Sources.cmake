@@ -1,0 +1,3 @@
+set( PROJECT_SOURCE_FILES ${PROJECT_SOURCE_FILES}
+	${PROJECT_LIBRARY}/AdaptiveClustering/cluster.cpp
+)

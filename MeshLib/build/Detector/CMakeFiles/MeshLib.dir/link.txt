@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libMeshLib.so -o ../../bin/libMeshLib.so CMakeFiles/MeshLib.dir/src/Vertex.cpp.o CMakeFiles/MeshLib.dir/src/Face.cpp.o CMakeFiles/MeshLib.dir/src/Mesh.cpp.o -Wl,-rpath,/home/ivan/Documentos/Software/MeshLib/bin ../../bin/libUtil.so 

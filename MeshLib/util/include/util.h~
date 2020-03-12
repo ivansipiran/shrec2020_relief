@@ -1,0 +1,17 @@
+#ifndef __UTIL_H__
+#define __UTIL_H__
+
+#include <iostream>
+//#include "Vertex.h"
+
+namespace Util{
+
+void myPause();
+void myPause(const char* message);
+int sgn(double num);
+void skipline(std::istream &in);
+//double distanceL2(Vertex* v1, Vertex* v2);
+bool isNumber(std::string str); 
+}
+
+#endif

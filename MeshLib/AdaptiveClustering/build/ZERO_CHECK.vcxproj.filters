@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Admin\Documents\Sipiran\Implementations\lib\AdaptiveClustering\build\CMakeFiles\e0789298a2456548a2fc0f34b105eee4\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EF0B19E3-BCB9-3FAB-AEA5-6B7EE01BADC5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

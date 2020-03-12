@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/PrepareDataset.dir/src/prepareDataset.cpp.o  -o PrepareDataset  -L/home/ivan/Documentos/Software/MeshLib/bin -Wl,-rpath,/home/ivan/Documentos/Software/MeshLib/bin -lutil -lMeshLib 

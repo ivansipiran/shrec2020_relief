@@ -1,0 +1,8 @@
+/home/ivan/Documentos/Software/MeshLib/build/CMakeFiles/rebuild_cache.dir
+/home/ivan/Documentos/Software/MeshLib/build/CMakeFiles/edit_cache.dir
+/home/ivan/Documentos/Software/MeshLib/build/util/CMakeFiles/rebuild_cache.dir
+/home/ivan/Documentos/Software/MeshLib/build/util/CMakeFiles/Util.dir
+/home/ivan/Documentos/Software/MeshLib/build/util/CMakeFiles/edit_cache.dir
+/home/ivan/Documentos/Software/MeshLib/build/Detector/CMakeFiles/rebuild_cache.dir
+/home/ivan/Documentos/Software/MeshLib/build/Detector/CMakeFiles/MeshLib.dir
+/home/ivan/Documentos/Software/MeshLib/build/Detector/CMakeFiles/edit_cache.dir
