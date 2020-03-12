@@ -1,3 +1,0 @@
-/home/ivan/Documentos/Software/PrepareDataSHREC2020/build/CMakeFiles/rebuild_cache.dir
-/home/ivan/Documentos/Software/PrepareDataSHREC2020/build/CMakeFiles/PrepareDataset.dir
-/home/ivan/Documentos/Software/PrepareDataSHREC2020/build/CMakeFiles/edit_cache.dir

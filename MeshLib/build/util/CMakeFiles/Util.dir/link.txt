@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libUtil.so -o ../../bin/libUtil.so CMakeFiles/Util.dir/src/Properties.cpp.o CMakeFiles/Util.dir/src/util.cpp.o 
