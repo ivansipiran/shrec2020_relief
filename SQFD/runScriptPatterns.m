@@ -1,6 +1,6 @@
-function runScriptPatterns()
+function runScriptPatterns(folder)
 addpath('./tools/');
-numModels = 10;
+numModels = 220;
 
 R = 0.3;
 S = 0.4;
@@ -10,7 +10,7 @@ for i = 1 : numModels
     basename = num2str(i);
     cad = sprintf('Computing signature of model %s\n', basename);
     disp(cad);
-    desc = importdata([basename '.desc']);
+    desc = importdata([folder '/' basename '.desc']);
     
     numDesc = size(desc, 1);
     descNew =[];
@@ -32,4 +32,4 @@ opt.function = 'exp';
 
 disp('Computing dissimalirity matrix');
 diss = computeDissimilarityMatrixSQFD(SS, opt);
-saveMatrix('test.matrix', diss);
+saveMatrix([folder '/test.matrix'], diss);

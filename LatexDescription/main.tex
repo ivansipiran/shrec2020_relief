@@ -1,0 +1,32 @@
+\section{Introduction}
+Our method consists of computing the distance between two shapes using the Signature Quadratic Form Distance~\cite{Beecks2009} (SQFD) over descriptions of local patches. The SQFD distance has proven to be effective in large-scale retrieval problems where shapes are represented as sets of features~\cite{Sipiran2017}. 
+
+We define $M$ as a 3D shape. The feature set $F_M$ contains descriptors for the shape. To use the SQFD distance, the feature set $F_M$ has to be clustered in a set of disjoint descriptors, such that $F_M = C_1 \cup C_2 \cup \ldots C_n$. Now, we compute a signature for each cluster which is defined as $S^M = \{(c_i^M, w_i^M), i=1, \ldots, n\}$, where $c_i^M = \frac{\sum_{d \in C_i} d}{|C_i|}$ and $w_i^M = \frac{|C_i|}{|F_M|}$. Each signature contains the average descriptor in the corresponding cluster and a weight that quantify the representative power of the cluster with respect to the entire feature set. The clustering method uses an intra-cluster threshold ($\lambda$), and inter-cluster threshold($\beta$) and a minimum number of elements per cluster($Nm$) to perform the grouping. For more details about the local clustering method, we refer to the paper~\cite{Sipiran2017}.
+
+Given two objects $M$ and $N$, and their corresponding signatures $S^M$ and $S^N$, the SQFD distance is obtained as follows
+
+\begin{equation}
+    SQFD(S^M, S^N) = \sqrt{(w^M | -w^N)\cdot A_{sim} \cdot (w^M | -w^N)^T}
+\end{equation}
+
+\noindent where $(w^M | w^N)$ denotes the concatenation of weight vectors. Matrix $A_{sim}$ stores the correlation between averaged descriptors in the signature. The correlation coefficient between two descriptors is defines as 
+\begin{equation}
+    corr(c_i, c_j) = \exp{-\alpha d^2(c_i, c_j)}
+\end{equation}
+
+In all our experiments, we chose $\alpha=0.9$ and $d$ is the $L_2$ distance.
+
+\subsection*{Shape description}
+Given an input shape, we sample $p$ local patches of diameter $diam$. To get a good representation, we randomly select a first seed vertex from the shape, and choose the remaining vertices using a farthest point sampling strategy over  geodesic distances. For each selected vertex, we compute a local patch of diameter $diam$ using a region growing method. 
+Each local patch is used to obtain a point cloud that represent the patch. In all our experiments we sample 2500 points from a local patch. For the description of a given point cloud, we use a Pointnet neural network~\cite{Qi2017}. We pre-trained a Pointnet network using the ModelNet-10 dataset~\cite{Wu2015} for a classification task. After training, we feed the neural network with the point clouds obtained from our previous procedure. As we are not interested in the classification of the point clouds, we use the 1024-dimensional feature obtained by Pointnet before the classification head of the network. 
+
+As summary, each shape in the dataset is represented by $p$ descriptors of 1024 dimensions, which are finally used to compute the signatures and the SQFD.
+
+\subsection*{Experimental Settings}
+For all the experiments, we used clustering parameters $\lambda=0.3, \beta=0.4$ and $Nm=10$. With respect to the descriptions, we present three configurations with the following parameters:
+
+\begin{itemize}
+    \item \textbf{SQFD($p=100$)}: Number of patches $p = 100$ of diameter $diam = 0.1$ of the diagonal of the bounding box of the shape.
+    \item \textbf{SQFD($p=200$)}: Number of patches $p = 200$ of diameter $diam = 0.05$ of the diagonal of the bounding box of the shape.
+    \item \textbf{SQFD($p=500$)}: Number of patches $p = 500$ of diameter $diam = 0.025$ of the diagonal of the bounding box of the shape.
+\end{itemize}
