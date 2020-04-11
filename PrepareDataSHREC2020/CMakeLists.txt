@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set(PROJECT_SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/prepareDataset.cpp)
-set(MESHLIB_LIBRARY /home/ivan/Documentos/Software/MeshLib)
+set(MESHLIB_LIBRARY /home/isipiran/Software/shrec2020_relief/MeshLib)
 
 include_directories(${MESHLIB_LIBRARY}/Detector/include)
 include_directories(${MESHLIB_LIBRARY}/util/include)

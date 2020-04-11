@@ -29,12 +29,15 @@ string getOutputPath(string filename, int idx){
 int main(int argc, char *argv[]){
     string filename(argv[1]);
 
+    int numSamples = atoi(argv[2]);
+    float percent = atof(argv[3]);
+
     // Leemos la malla
     Mesh mesh(filename.c_str());
     
     //Sampleamos puntos en la superficie
     vector<int> indices;
-    mesh.sampleSurfacePoints(200, indices);
+    mesh.sampleSurfacePoints(numSamples, indices);
 
     //Para cada punto, generamos una malla y sampleamos puntos en cada malla
     int cont = 0;
@@ -43,7 +46,7 @@ int main(int argc, char *argv[]){
         set<int> vdumb;
 
         Mesh* patch = new Mesh();
-        mesh.getPatch(index, dumb, mesh.getDiagonal()*0.1, mesh.getVertices()[index], patch, vdumb);
+        mesh.getPatch(index, dumb, mesh.getDiagonal()*percent, mesh.getVertices()[index], patch, vdumb);
 
         vector<Vertex> vertices;
         patch->samplePoints(3000, vertices);
