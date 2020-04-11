@@ -18,7 +18,7 @@ cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 ```
 
-These commands will create the .so files in the build directory.
+These commands will create the .so files in the build directory. Please add the folder Meshlib/bin in the LD_LIBRARY_PATH env variable.
 
 #### 2. PrepareDataSHREC2020
 
@@ -32,6 +32,8 @@ make
 
 These commands will create the program PrepareDataset which receives an OFF input file and produces a set of point cloud patches. To process the entire dataset, you could use the script.sh bash script provided in the repository. If the input file has name 1.off, the point clouds are stored in files 1_0.xyz, 1_1.xyz, ...
 
+We recommend to create a symbolic link to the binary PrepareDatasetSHREC2020/bin/PrepareDataset
+
 #### 3. Description with PointNet
 The folder pointnet contains a modified version of the original repository of [pointnet.pytorch](https://github.com/fxia22/pointnet.pytorch). Go to the folder pointnet and execute 
 
@@ -44,7 +46,7 @@ to install the packages.
 We provide the script utils/compute_feature.py  to compute features for the entire SHREC dataset. To execute the script, write the following command:
 
 ```
-python3 utils/compute_feature.py --model=utils/cls/cls_model_99.pth --num_points=2500 --folder=<data_folder>
+python3 utils/compute_feature.py --model=utils/cls/cls_model_99.pth --num_points=2500 --folder=<data_folder> --num_samples=<num_samples>
 ```
 where <data_folder> is the directory with all the point clouds generated with PrepareDataset program. The output of the description is a file with descriptor per shape. The extension of the descriptor file is .desc.
 
